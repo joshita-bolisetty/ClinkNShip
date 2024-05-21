@@ -1,0 +1,199 @@
+<html>
+    <head>
+        <title>OTP</title>
+        <style>
+            .body{
+                background-image:url("D:\\Projects\\Click n Ship\\Resources\\mainbg.jpg");
+                background-repeat:no-repeat;
+                background-size: cover;
+            }
+            @keyframes appear1{
+                from{
+                    transform: translateX(-500px);
+                }
+                to{
+                    transform: translateX(-20px);
+                }
+            }
+            .logo{
+                animation-name: appear1;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                animation-delay: 0.5s;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+
+            }
+            @keyframes appear2{
+                from{
+                    transform: translateX(-500px);
+                }
+                to{
+                    transform: translateX(9px);
+                }
+            }
+            .tag{
+                animation-name: appear2;
+                animation-duration: 1.5s;
+                animation-timing-function: ease;
+                animation-delay: 1s;
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+
+            }
+            #form{
+                height: 250px;
+                width: 350px;
+                position: absolute;
+                top: 25%;
+                left: 40%;
+                border: 2px solid rgba(255,255,255,0.5);
+                box-shadow: 0 0 30px rgba(0,0,0,0.75);
+                border-radius: 20px;
+                background-color:transparent;
+                backdrop-filter: blur(20px);
+                text-align: center;
+            }
+            .userpass{
+                background-color:transparent;
+                border-radius:20px;
+                border-width:1px;
+                border-style:solid;
+                border-color:white;
+                height: 25px;
+                transform: translateY(-6px);
+            }
+            .line{
+                border-style:solid;
+                border-color:rgba(0,0,0,0.5);
+                border-right:40px;
+                transform:translateY(-10px);
+                border-width:1px;
+            }
+            .forpass{
+                font-size:10px;
+                color:rgb(241, 214, 9);
+                display: block; 
+                text-align: right;
+                transform: translateX(-30px);
+            }
+            .butt{
+                color:rgb(241, 214, 9);
+                background-color:rgb(21, 94, 188);
+                border-style:solid;
+                border-color:rgb(241, 214, 9);
+                border-radius:6px;
+                font-weight:bold;
+                border-width:3px;
+                transition-property: all;
+                transition-delay:0;
+                transition-duration:0.3s;
+                transition-timing-function:ease ;
+                cursor:pointer;
+                padding-right: 30px; 
+                padding-left: 30px;   
+                padding-top: 7px;  
+                padding-bottom: 7px; 
+                transform: translateX(12px);        
+            }
+            .butt:hover{
+                box-shadow:0 0 10px rgb(241, 214, 9);
+                /* color:rgb(21, 94, 188);
+                background-color:rgb(241, 214, 9);
+                border-color:rgb(21, 94, 188);
+                border-color:rgb(241, 214, 9);
+                border-radius:6px; */
+            }
+            #sub{
+                margin-right: 20px;
+            }
+            .box{
+                height: 40px;
+                font-size: 40px;
+                width:135px;
+                letter-spacing: 10px;
+                background-color: transparent;
+                outline: none;
+                border: none;   
+                caret-color:rgb(241, 214, 9) ;  
+                color: white; 
+            }
+            .dash{                
+                transition: opacity 2s ease-in;
+            }
+            #d1{
+                transform: translateX(-10px) translateY(-10px);
+            }
+            #d2{
+                transform: translateX(-6px) translateY(-10px);
+            }
+            #d3{
+                transform: translateX(-2px) translateY(-10px);
+            }
+            #d4{
+                transform: translateX(2px) translateY(-10px);
+            }
+        </style>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                const textBox = document.getElementById('tbox');
+                const i1 = document.getElementById('d1');
+                const i2 = document.getElementById('d2');
+                const i3 = document.getElementById('d3');
+                const i4 = document.getElementById('d4');
+                textBox.addEventListener('input', function() {
+                    const typedCharacters = textBox.value.length;
+                    i1.src = 'D:\\Projects\\Click n Ship\\Resources\\black_dash.png';
+                    i2.src = 'D:\\Projects\\Click n Ship\\Resources\\black_dash.png';
+                    i3.src = 'D:\\Projects\\Click n Ship\\Resources\\black_dash.png';
+                    i4.src = 'D:\\Projects\\Click n Ship\\Resources\\black_dash.png';
+                    if (typedCharacters === 1) {
+                        i1.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        textBox.style.caretColor='rgb(241, 214, 9)';
+                    } 
+                    else if (typedCharacters === 2){
+                        i1.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png';   
+                        i2.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        textBox.style.caretColor='rgb(241, 214, 9)';
+                    }
+                    else if (typedCharacters === 3){
+                        i1.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        i2.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        i3.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png';
+                        textBox.style.caretColor='rgb(241, 214, 9)';
+                    }
+                    else if (typedCharacters === 4){
+                        i1.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        i2.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        i3.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        i4.src = 'D:\\Projects\\Click n Ship\\Resources\\yellow_dash.png'; 
+                        textBox.style.caretColor='transparent';
+                    }
+                    else{
+                        textBox.style.caretColor='rgb(241, 214, 9)';
+                    }
+                });   
+            });
+            popup=()=>{
+                window.alert("Your account has been created successfully");
+                window.location.href='D:\\Projects\\Click n Ship\\Pages\\login.html';
+            }
+        </script>
+    </head>
+    <body class="body">
+        <img class="logo" src="D:\Projects\Click n Ship\Resources\logo.png" width="225" height="37.5">
+        <br>
+        <img class="tag" src="D:\Projects\Click n Ship\Resources\tagline.png" width="200" height="17">    
+    <div id="form">
+        <div style="font-family: Tahoma, Geneva, Verdana, sans-serif; color: white;">Verify your account. <br> A 4 digit OTP is sent to your email address.</div>
+        <h3 style="font-family: ifc hardball; color: rgb(241, 214, 9);">ENTER OTP</h3>  
+        <input type="text" class="box" maxlength="4" id="tbox"><br>
+        <img class="dash" id="d1" src="D:\Projects\Click n Ship\Resources\black_dash.png" height="2px" width="25px">
+        <img class="dash" id="d2" src="D:\Projects\Click n Ship\Resources\black_dash.png" height="2px" width="25px">
+        <img class="dash" id="d3" src="D:\Projects\Click n Ship\Resources\black_dash.png" height="2px" width="25px">
+        <img class="dash" id="d4" src="D:\Projects\Click n Ship\Resources\black_dash.png" height="2px" width="25px">
+        <a href="" class="forpass">Resend OTP</a><br>
+        <input class="butt" id="sub" type="SUBMIT" value="SUBMIT" data-inline="true" onclick="popup()">        
+    </div>
+    </body> 
+</html>

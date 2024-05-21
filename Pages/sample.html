@@ -1,0 +1,21 @@
+<html>
+    <head>
+<style>
+    .container {
+        position: relative;
+        width: 300px;
+    }
+
+    #input-field:focus + #text-div {
+        transform: translateY(15px);
+        transition: transform 0.3s ease;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div id="text-div">Text to Translate</div>
+    <input type="text" id="input-field">
+</div>
+</body>
+</html>

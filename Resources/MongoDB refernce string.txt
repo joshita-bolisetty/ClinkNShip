@@ -1,0 +1,1 @@
+mongodb+srv://cns:vacationproject@clicknship.annf7rx.mongodb.net/
